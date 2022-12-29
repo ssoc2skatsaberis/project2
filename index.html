@@ -1,0 +1,65 @@
+<!-- By Stelios Katsaberis
+    Σελίδα υπολογισμού τριών μεγεθών εμβαδού -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Υπολογιστής Μεγεθών</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../images/favi.jfif" type="image/x-icon">
+    <script src="../functions/function.js"></script>
+</head>
+<body onload="onLoad()">
+    <h1>Υπολογισμός Ποσοτήτων / Μετατροπέας Μεγεθών</h1>
+    <p id ="p1ID">Παρακάτω θα βρείτε μία λίστα από επιλογές για, που θα σας βοηθήσουν στη μετατροπή Φυσικών ποσοτήτων & μονάδων μέτρησης.</p>
+    <h2>Επίλεξε από τη λίστα:</h2>
+    <form class="formC" id = "formID">
+         <label for="counts">Υπολογισμός Εμβαδού:</label>
+        <select name="counts" id="countsID" size="3" onclick="onResultChange()">
+            <option value="count1" id ="count1ID" selected></option>
+            <option value="count2" id ="count2ID"></option>
+            <option value="count3" id ="count3ID"></option>
+        </select>
+      
+    </form>
+      <div id="monitorID" class="monitor"><br>
+          <div class="monitorText1" id="monitorTextID1"></div><br>
+          <div class="monitorText2" id="monitorTextID2"></div><br><br>
+          <div class="monitorText3" id="monitorTextID3"></div>
+        <div class="monitorButton" id="monitorButtonID">
+            <input class="textLabel1" type="text" name="textLabel1" id="textLabel1ID" style="visibility:hidden">
+            <input type="number" min="0" id="input1ID" placeholder="0 cm" style="visibility:hidden">
+            <input class="textLabel2" type="text" name="textLabel2" id="textLabel2ID" style="visibility:hidden">
+            <input type="number" min="0" id="input2ID" placeholder="0 cm" style="visibility:hidden"> <br><br>
+            <button type="submit" id = "submitID" onclick="onButtonClick()" style="visibility:hidden"></button>
+          
+        </div>  
+      </div>
+     <script>
+        
+        document.getElementById("count1ID").innerHTML ="Τριγώνου";
+        document.getElementById("count2ID").innerHTML ="Τετραπλεύρου";
+        document.getElementById("count3ID").innerHTML ="Επιφάνειας Κύκλου";
+        let monitor1 = document.getElementById("monitorTextID1");
+        let monitor2 = document.getElementById("monitorTextID2");
+        let monitor3 = document.getElementById("monitorTextID3");
+        let input1= document.getElementById("input1ID");
+        let input2= document.getElementById("input2ID");
+        let choise = document.getElementById("countsID");
+        let buttonCh = document.getElementById("submitID");
+        let label1 = document.getElementById("textLabel1ID");
+        let label2 = document.getElementById("textLabel2ID");
+        buttonCh.innerHTML ="Επίλεξε";
+        input1.style.backgroundColor = "lightgray";
+        input2.style.backgroundColor = "lightgray";
+        monitor2.style.backgroundColor = "#8ED4E2";
+        monitor2.style.color = "#544D0D";
+        monitor2.style.fontSize= "18px";
+
+
+     </script>
+</body>
+</html>

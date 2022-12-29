@@ -1,0 +1,112 @@
+* {   /* ορίζουμε χρώμα στο background για όλη τη σελίδα και περιθώρια αριστερά - δεξιά για να μην κολλάει τίποτα στις άκρες*/
+    background-color: rgb(245, 241, 238);
+    padding-left: 2%;
+    padding-right: 2%;
+}
+h2 {  /* τοποθέτηση υπογράμμισης στον τίτλο του μενού επιλογών υπολογισμού*/
+    text-decoration: underline;
+}
+p{ /*βασική μορφοποίηση για τα γράμματα και το μέγεθός τους, για την παράγραφο κάτω από τον τίτλο*/
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*μορφοποίηση που αφορά στο πλαίσιο που περιέχει το μενού επιλογών*/
+.formC{
+    border: 2px solid black;    /*ορισμός πλαισίου, καθορισμός πλάτους ανάλογα με το μέγεθος του παραθύρου και ύψος σταθερό*/
+    width: 30%;
+    height: 120px;
+    border-radius: 20px;    /*καθορισμός στρογγυλοποίησης στο πλαίσιο*/
+    background-color: antiquewhite; /*καθορισμός χρώματος φόντου,*/
+    display: inline-block;  /* ενημέρωση ότι θα μένει στην ίδια σειρά με το διπλανό μπλόκ (το μόνιτορ αποτελεσμάτων)*/
+    margin-left: 10px;  /* καθορισμός αποστάσεων από τα διπλανά μπλοκ*/
+    margin-right: 10px;
+    padding-top: 3%;    /*δημιουργία κενού στο κάτω μέρος για να μην κολλήσουν*/
+}
+label{  /*καθορισμός χρωμάτων φόντου, background και άλλων σχετικά με την ετικέτα του μενού*/
+    background-color: antiquewhite;
+    padding-left: 5px; /*δημιουργία κενού πριν και μετά ώστε να μην κολλήσει στο πλαίσιο ή στο μενού-λίστα*/
+    padding-right: 6%;
+    float: left;    /*τοποθέτηση αριστερά σε σχέση με το μενού επιλογων*/
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: brown;
+    text-shadow: 2px 1px gray; /*ορισμός υπογράμμισης και σκιάς*/
+    text-decoration: underline red; 
+}
+select{ 
+    border: 0ch;
+    background-color: antiquewhite;
+    padding-inline: 5%; /*δημιουργία χώρου πέριξ των κουμπιών επιλογής*/
+}
+.monitor{ /*καθορισμός μορφοποίησης της οθόνης αποτελεσμάτων δεξιά*/
+    border: 5px medium dashed black;
+    width: 50%; /*ορισμός πλαισίου και διαστάσεων, στην ίδια λογική με το formC*/
+    height: 350px; /*σταθερό ύψος, αναλογικό πλάτος και στρογγυλοποιημένες γωνίες*/
+    border-radius: 50px;
+    background-color: lemonchiffon;
+    display: inline-block; /*τοποθέτηση στην ίδια ευθεία με το formC και δεξιά*/
+    float: right;
+    margin-right: 8%;
+    text-align: center;
+}
+.monitorButton{
+    /*χρώμα φόντου στο πλαίσιο που φυλοξενεί την είσοδο τιμών*/
+    background-color: lemonchiffon;
+
+}
+
+button{
+    background-image: linear-gradient(gray, lightblue);
+    align-self:flex-end;
+    align-items: right;
+}
+
+option{
+    color: white;
+    background-image: linear-gradient(gray, lightblue);
+    width: 100%;
+    font-size: 14px;
+}
+/* mouse over link */
+
+option:hover {
+    background-image: linear-gradient(rgb(189, 37, 37), rgb(17, 17, 18));
+}
+option:active{
+    background-image: linear-gradient(rgb(37, 189, 57), rgb(193, 214, 38));
+}
+
+
+input{
+    margin-top: 15%;
+}
+.textLabel1, .textLabel2{
+    border: 0ch;
+    width: 10%;
+    margin-left: 15px;
+    background-color: teal;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.monitorText3{
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    width: 50%;
+    animation-name: label3Anim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes label3Anim {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+    0%   {color: rgb(19, 18, 18);}
+    25%  {color: rgb(255, 0, 217);}
+    50%  {color: rgb(236, 235, 225);}
+    100% {color: rgb(243, 245, 236);}
+     
+  }
